@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Problem Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #6F4E37; /* Coffee color */
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    img {
+      max-width: 300px;
+      margin: 20px 0;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      margin: 10px 0;
+      width: 80%;
+      max-width: 400px;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #ffffff;
+      color: #6F4E37;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    a {
+      color: #f0e6d2;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Problem</h1>
+  <img src="img.jpeg" alt="Problem Image" id="image1">
+
+  <p>Enter your thoughts:</p>
+  <input type="text" id="input1" placeholder="Type something...">
+
+  <p>
+    GitHub repo: 
+    <a href="https://github.com/varshavkumar98765/miniature-octo-lamp" target="_blank">
+      https://github.com/varshavkumar98765/miniature-octo-lamp
+    </a>
+  </p>
+
+  <h2>Final Answer</h2>
+  <input type="text" id="answerBox" placeholder="Enter final answer">
+  <br>
+  <button onclick="checkAnswer()">Submit</button>
+
+  <script>
+    function checkAnswer() {
+      const correctAnswer = "openai"; // Change this as needed
+      const userAnswer = document.getElementById("answerBox").value.trim().toLowerCase();
+      if (userAnswer === correctAnswer) {
+        window.location.href = "https://www.youtube.com/";
+      } else {
+        alert("Incorrect answer. Try again.");
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Problem Page</title>
+</head>
+<body>
+  <h1>Problem</h1>
+  <img src="https://via.placeholder.com/150" alt="Problem Image" id="image1">
+
+  <p>Enter your thoughts:</p>
+  <input type="text" id="input1" placeholder="Type something...">
+
+  <p>GitHub repo: 
+    <a href="https://github.com/varshavkumar98765/miniature-octo-lamp" target="_blank">
+      https://github.com/varshavkumar98765/miniature-octo-lamp
+    </a>
+  </p>
+
+  <h2>Final Answer</h2>
+  <input type="text" id="answerBox" placeholder="Enter final answer">
+  <button onclick="checkAnswer()">Submit</button>
+
+  <script>
+    function checkAnswer() {
+      const correctAnswer = "openai"; // Change this to your actual required answer
+      const userAnswer = document.getElementById("answerBox").value.trim().toLowerCase();
+      if (userAnswer === correctAnswer) {
+        window.location.href = "https://www.youtube.com/";
+      } else {
+        alert("Incorrect answer. Try again.");
+      }
+    }
+  </script>
+</body>
+</html>

@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>The Final Challenge</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #6F4E37; /* Coffee color */
-      color: #ffffff;
+      font-family: 'Share Tech Mono', monospace;
+      background-color: #0d1117;
+      color: #c9d1d9;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -17,80 +17,126 @@
       min-height: 100vh;
       padding: 20px;
       text-align: center;
+      background-image: linear-gradient(145deg, #0d1117, #161b22);
     }
 
     h1, h2 {
-      font-family: 'Playfair Display', serif;
+      color: #58a6ff;
+      text-shadow: 0 0 3px #1f6feb;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 10px 0;
+      line-height: 1.6;
+      max-width: 800px;
     }
 
     img {
       max-width: 300px;
       margin: 20px 0;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      box-shadow: 0 0 8px rgba(88, 166, 255, 0.3);
     }
 
     input[type="text"] {
-      padding: 10px;
+      padding: 12px;
       margin: 10px 0;
       width: 80%;
       max-width: 400px;
-      border-radius: 5px;
-      border: none;
+      border-radius: 4px;
+      border: 1px solid #30363d;
+      background-color: #161b22;
+      color: #58a6ff;
       font-size: 16px;
+      text-align: center;
+      transition: box-shadow 0.3s;
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      box-shadow: 0 0 8px #58a6ff;
     }
 
     button {
-      padding: 10px 20px;
-      background-color: #ffffff;
-      color: #6F4E37;
-      border: none;
-      border-radius: 5px;
+      padding: 10px 25px;
+      background-color: #21262d;
+      color: #58a6ff;
+      border: 1px solid #30363d;
+      border-radius: 4px;
       font-weight: bold;
       cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    }
+
+    button:hover {
+      background-color: #30363d;
+      transform: translateY(-1px);
+      box-shadow: 0 0 8px #58a6ff;
     }
 
     a {
-      color: #f0e6d2;
+      color: #8b949e;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    p {
-      margin: 10px 0;
+    a:hover {
+      color: #58a6ff;
+      text-decoration: underline;
+    }
+
+    ol {
+      text-align: left;
+      max-width: 600px;
+      background-color: #161b22;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #30363d;
+      box-shadow: 0 0 8px rgba(88, 166, 255, 0.15);
+    }
+
+    ol li {
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
 
   <h1>Solve this...</h1>
-  <p>You are given a DNA sequence. Decode it into its complementary sequence.
-    <br><i>How to find complementary : Replace A with T and T with A. Replace C with G and G with C</i>
-    <br> 
-    Then you convert it into morse code using... <br>
+  <p>
+    You are given a DNA sequence. Decode it into its complementary sequence.<br><br>
+    <i><b>How to find complementary: Replace A with T and T with A. Replace C with G and G with C.</i><b><br><br>
+    Then you convert it into morse code using...<br>
     <img src="atcg.png" alt="Reference Image" id="image1">
   </p>
   <p>Now decode this morse code to get a set of numbers</p>
-  <br>
+
   <h2>Sequence to decode :</h2>
   <ol>
     <li>TTA TCCA CGG</li>
-    <LI>CAGA TAG TAAA</LI>
-    <LI>TCG GAT AGT TCG</LI>
-    <LI>CGG GGA CCAAA TTA TGA</LI>
-    <LI>GGGGG GGAAA GAAAA</LI>
-    <LI>TGT CAT ATGG GTAA</LI>
+    <li>CAGA TAG TAAA</li>
+    <li>TCG GAT AGT TCG</li>
+    <li>CGG GGA CCAAA TTA TGA</li>
+    <li>GGGGG GGAAA GAAAA</li>
+    <li>TGT CAT ATGG GTAA</li>
   </ol>
+
   <h2>Morse code reference</h2>
   <img src="morse.png" alt="Problem Image" id="image2">
-  <br>
+
   <p>Solution is a set of 3 to 4 digit numbers</p>
   <input type="text" id="input1" placeholder="Set of numbers is...">
 
   <p>
     To decipher the next part go to <br>
-    GitHub repo: 
+    GitHub repo:
     <a href="https://github.com/varshavkumar98765/miniature-octo-lamp" target="_blank">
       https://github.com/varshavkumar98765/miniature-octo-lamp
     </a>
   </p>
-  <br><br>
+
   <h2>Final Answer</h2>
   <input type="text" id="answerBox" placeholder="Enter final answer">
   <br>

@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>The Final Challenge</title>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Share Tech Mono', monospace;
-      background-color: #0d1117;
-      color: #c9d1d9;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #0e0e0e;
+      color: #e0e0e0;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -17,12 +17,12 @@
       min-height: 100vh;
       padding: 20px;
       text-align: center;
-      background-image: linear-gradient(145deg, #0d1117, #161b22);
+      background-image: radial-gradient(ellipse at top, #1a1a1a, #0e0e0e 80%);
     }
 
     h1, h2 {
-      color: #58a6ff;
-      text-shadow: 0 0 3px #1f6feb;
+      color: #00fff7;
+      text-shadow: 0 0 5px #00fff7;
       margin-bottom: 10px;
     }
 
@@ -35,9 +35,9 @@
     img {
       max-width: 300px;
       margin: 20px 0;
-      border: 1px solid #30363d;
-      border-radius: 6px;
-      box-shadow: 0 0 8px rgba(88, 166, 255, 0.3);
+      border: 2px solid #00fff7;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00fff7;
     }
 
     input[type="text"] {
@@ -45,56 +45,49 @@
       margin: 10px 0;
       width: 80%;
       max-width: 400px;
-      border-radius: 4px;
-      border: 1px solid #30363d;
-      background-color: #161b22;
-      color: #58a6ff;
+      border-radius: 5px;
+      border: 1px solid #444;
+      background-color: #1e1e1e;
+      color: #00fff7;
       font-size: 16px;
       text-align: center;
-      transition: box-shadow 0.3s;
-    }
-
-    input[type="text"]:focus {
-      outline: none;
-      box-shadow: 0 0 8px #58a6ff;
+      box-shadow: inset 0 0 5px #00fff7;
     }
 
     button {
       padding: 10px 25px;
-      background-color: #21262d;
-      color: #58a6ff;
-      border: 1px solid #30363d;
-      border-radius: 4px;
+      background-color: transparent;
+      color: #00fff7;
+      border: 2px solid #00fff7;
+      border-radius: 5px;
       font-weight: bold;
       cursor: pointer;
-      transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+      transition: background-color 0.3s, transform 0.2s;
     }
 
     button:hover {
-      background-color: #30363d;
-      transform: translateY(-1px);
-      box-shadow: 0 0 8px #58a6ff;
+      background-color: #00fff7;
+      color: #0e0e0e;
+      transform: scale(1.05);
     }
 
     a {
-      color: #8b949e;
+      color: #ff00ff;
       text-decoration: none;
       font-weight: bold;
     }
 
     a:hover {
-      color: #58a6ff;
       text-decoration: underline;
     }
 
     ol {
       text-align: left;
       max-width: 600px;
-      background-color: #161b22;
+      background-color: #1a1a1a;
       padding: 20px;
-      border-radius: 8px;
-      border: 1px solid #30363d;
-      box-shadow: 0 0 8px rgba(88, 166, 255, 0.15);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
     }
 
     ol li {
@@ -107,12 +100,12 @@
   <h1>Solve this...</h1>
   <p>
     You are given a DNA sequence. Decode it into its complementary sequence.<br><br>
-    <i><b>How to find complementary: Replace A with T and T with A. Replace C with G and G with C.</i><b><br><br>
+    <i><b>How to find complementary: Replace A with T and T with A. Replace C with G and G with C.</b></i><br><br>
     Then you convert it into morse code using...<br>
     <img src="atcg.png" alt="Reference Image" id="image1">
   </p>
   <p>Now decode this morse code to get a set of numbers</p>
-
+  <br>
   <h2>Sequence to decode :</h2>
   <ol>
     <li>TTA TCCA CGG</li>
@@ -125,6 +118,7 @@
 
   <h2>Morse code reference</h2>
   <img src="morse.png" alt="Problem Image" id="image2">
+  <br>
 
   <p>Solution is a set of 3 to 4 digit numbers</p>
   <input type="text" id="input1" placeholder="Set of numbers is...">
@@ -137,6 +131,7 @@
     </a>
   </p>
 
+  <br><br>
   <h2>Final Answer</h2>
   <input type="text" id="answerBox" placeholder="Enter final answer">
   <br>
